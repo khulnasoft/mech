@@ -1,0 +1,16 @@
+name: nightly-tests
+on: [push, pull_request]
+jobs:
+  run-nightly-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️Aikit Mech
+        uses: actions/checkout@v2
+        with:
+          path: mech
+          persist-credentials: false
+
+      - name: Run Tests
+        run: |
+          cd mech
+          docker run --rm -v `pwd`:/mech khulnasoft/mech:latest python3 -m pytest aikit_mech_tests/

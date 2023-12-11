@@ -1,0 +1,5 @@
+aikit-core # mod_name=aikit
+aikit-mech # mod_name=aikit_mech
+aikit-vision # mod_name=aikit_vision
+aikit-demo-utils # mod_name=aikit_demo_utils
+open3d
